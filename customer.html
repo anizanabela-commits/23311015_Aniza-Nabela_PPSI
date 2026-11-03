@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Belanja Hasil Tani — Pasar Tani OKU Timur</title>
+  
+  <meta name="theme-color" content="#2E7D32">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Styling Tambahan Khusus Customer Portal */
+    .customer-subnav {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+    }
+    .loc-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Offline Warning Banner -->
+  <div id="offline-banner" class="offline-banner">
+    ⚠️ Anda sedang offline. Menampilkan data tersimpan dari cache lokal.
+  </div>
+
+  <!-- Header Pembeli -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="customer.html" class="brand">
+        <div class="brand-icon">
+          <img src="icon.svg" alt="Logo" style="width: 28px; height: 28px;">
+        </div>
+        <div>
+          <div class="brand-title">Pasar Tani OKU Timur</div>
+          <div class="brand-subtitle">Katalog Belanja Pembeli</div>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" class="search-input" placeholder="Cari beras belitang, sayur segar, olahan...">
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <button id="cart-btn" class="cart-btn" title="Keranjang Belanja">
+          🛒
+          <span id="cart-count" class="cart-badge" style="display: none;">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sub-header Lokasi Pengiriman -->
+  <div class="customer-subnav">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <div class="loc-badge">
+        <span>📍 Kirim ke:</span>
+        <span style="color: var(--text-main); font-weight: 700;">Martapura / Belitang, OKU Timur</span>
+      </div>
+      <div>
+        <a href="index.html" style="color: var(--primary); text-decoration: none; font-size: 12px; font-weight: 600;">
+          🔄 Beralih ke Portal Utama
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Konten Pembeli -->
+  <main id="view-buyer" class="view-panel active">
+    <!-- Hero Banner -->
+    <section id="buyer-hero" class="hero-banner">
+      <div class="container hero-content">
+        <div class="hero-badge">🌾 Petani & UMKM Lokal OKU Timur</div>
+        <h1 class="hero-title">Belanja Produk Segar Langsung Dari Sumbernya</h1>
+        <p class="hero-desc">Bebas bahan pengawet kimia, dipanen dengan teliti oleh para petani Belitang, Buay Madang, Martapura, dan Cempaka.</p>
+        <div class="hero-highlights">
+          <span class="highlight-pill">⚡ Pengantaran Cepat COD</span>
+          <span class="highlight-pill">🌾 Beras Pulen Belitang</span>
+          <span class="highlight-pill">🛡️ Jaminan Kualitas Dinas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Katalog Belanja -->
+    <div id="buyer-catalog" class="container">
+      <div class="section-title-wrap">
+        <h2 class="section-title"><span>📂</span> Kategori Produk Pertanian</h2>
+      </div>
+      <div id="category-bar" class="category-bar">
+        <!-- Render dinamis oleh app.js -->
+      </div>
+
+      <div class="section-title-wrap" style="margin-top: 20px;">
+        <h2 class="section-title"><span>🛒</span> Pilihan Komoditas Segar</h2>
+      </div>
+      <div id="product-grid" class="product-grid">
+        <!-- Render dinamis oleh app.js -->
+      </div>
+    </div>
+
+    <!-- Riwayat Pesanan Pembeli -->
+    <div id="buyer-orders-tab" class="container" style="display: none; padding-top: 24px;">
+      <div class="section-title-wrap">
+        <h2 class="section-title"><span>📦</span> Riwayat Pesanan Saya</h2>
+      </div>
+      <div id="buyer-orders-list">
+        <!-- Render dinamis oleh app.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Hidden placeholder panels for seller & admin so app.js scripts run smoothly without errors -->
+  <div id="view-seller" class="view-panel" style="display: none;"></div>
+  <div id="view-admin" class="view-panel" style="display: none;"></div>
+
+  <!-- MODAL KERANJANG BELANJA -->
+  <div id="cart-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">🛒 Keranjang Belanja Anda</h3>
+        <button class="modal-close" onclick="closeCartModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="cart-items-container">
+          <!-- Render dinamis -->
+        </div>
+      </div>
+      <div class="modal-footer" style="flex-direction: column; align-items: stretch; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 14px; color: var(--text-muted);">Total Pembayaran:</span>
+          <span id="cart-total-amount" style="font-size: 18px; font-weight: 800; color: var(--primary-dark);">Rp 0</span>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-secondary" style="flex: 1;" onclick="closeCartModal()">Lanjut Belanja</button>
+          <button id="btn-to-checkout" class="btn btn-primary" style="flex: 2;" onclick="openCheckoutStep()">Lanjut ke Pengiriman ➜</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CHECKOUT & PENGIRIMAN -->
+  <div id="checkout-modal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">📋 Formulir Pengiriman Pesanan</h3>
+        <button class="modal-close" onclick="closeCheckoutModal()">✕</button>
+      </div>
+      <form id="checkout-form">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Nama Lengkap Penerima *</label>
+            <input type="text" id="buyer-name" class="form-control" placeholder="Nama Anda" required value="Siti Rahmawati">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nomor WhatsApp / Telepon *</label>
+            <input type="tel" id="buyer-phone" class="form-control" placeholder="08xxxxxxxxxx" required value="082199887766">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kecamatan di OKU Timur *</label>
+            <select id="buyer-district" class="form-control" required>
+              <option value="Belitang">Belitang</option>
+              <option value="Belitang Madang Raya">Belitang Madang Raya</option>
+              <option value="Belitang II">Belitang II</option>
+              <option value="Belitang III">Belitang III</option>
+              <option value="Martapura" selected>Martapura</option>
+              <option value="Buay Madang">Buay Madang</option>
+              <option value="Buay Madang Timur">Buay Madang Timur</option>
+              <option value="Cempaka">Cempaka</option>
+              <option value="Semendawai Barat">Semendawai Barat</option>
+              <option value="Semendawai Suku III">Semendawai Suku III</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Alamat Lengkap Pengantaran *</label>
+            <textarea id="buyer-address" class="form-control" placeholder="Tuliskan nama jalan, RT/RW, dan patokan rumah..." required>Jl. Merdeka No. 12, Martapura</textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pilihan Metode Pembayaran *</label>
+            <select id="payment-method" class="form-control">
+              <option value="COD (Bayar di Tempat)">💵 COD (Bayar di Tempat saat Barang Tiba)</option>
+              <option value="Transfer Bank Sumsel Babel">🏦 Transfer Bank Sumsel Babel</option>
+              <option value="Transfer BRI / Mandiri">💳 Transfer Virtual Account (BRI / Mandiri)</option>
+              <option value="QRIS Pasar Tani OKU">📱 QRIS Petani Digital</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Catatan Tambahan untuk Petani Penjual</label>
+            <input type="text" id="order-notes" class="form-control" placeholder="Misal: Tolong kirim pagi hari">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeCheckoutModal()">Batal</button>
+          <button type="submit" class="btn btn-primary">Konfirmasi Pesanan ✅</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Mobile Bottom Navigation (PWA UX) -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-tab="home">
+      <span class="nav-icon">🏠</span>
+      <span>Beranda</span>
+    </button>
+    <button class="nav-item" data-tab="category">
+      <span class="nav-icon">📂</span>
+      <span>Kategori</span>
+    </button>
+    <button class="nav-item" data-tab="cart">
+      <span class="nav-icon">🛒</span>
+      <span>Keranjang</span>
+    </button>
+    <button class="nav-item" data-tab="orders">
+      <span class="nav-icon">📦</span>
+      <span>Pesanan</span>
+    </button>
+    <button class="nav-item" data-tab="account">
+      <span class="nav-icon">👤</span>
+      <span>Akun</span>
+    </button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,313 @@
+{
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Beras dan hasil pertanian",
+      "icon": "🌾"
+    },
+    {
+      "id": "cat-2",
+      "name": "Karet",
+      "icon": "🌳"
+    },
+    {
+      "id": "cat-3",
+      "name": "Sayur dan buah",
+      "icon": "🥬"
+    },
+    {
+      "id": "cat-4",
+      "name": "Olahan khas Belitang",
+      "icon": "🍘"
+    },
+    {
+      "id": "cat-5",
+      "name": "Produk UMKM lainnya",
+      "icon": "🍯"
+    }
+  ],
+  "stores": [
+    {
+      "id": "STR-001",
+      "name": "Tani Makmur Belitang",
+      "owner": "Pak Wayan Sudarma",
+      "phone": "081273449901",
+      "address": "Desa Karang Binangun, BK 10",
+      "district": "Belitang Madang Raya",
+      "status": "terverifikasi",
+      "verifiedAt": "2026-10-15",
+      "rating": 4.9,
+      "salesCount": 142
+    },
+    {
+      "id": "STR-002",
+      "name": "Subur Sari Martapura",
+      "owner": "Ibu Nurhayati",
+      "phone": "082188443322",
+      "address": "Jl. Merdeka, Pasar Martapura",
+      "district": "Martapura",
+      "status": "terverifikasi",
+      "verifiedAt": "2026-10-20",
+      "rating": 4.8,
+      "salesCount": 98
+    },
+    {
+      "id": "STR-003",
+      "name": "Berkah Perkebunan Buay Madang",
+      "owner": "Pak Hendra Saputra",
+      "phone": "081377551122",
+      "address": "Desa Kurungan Nyawa",
+      "district": "Buay Madang",
+      "status": "terverifikasi",
+      "verifiedAt": "2026-10-22",
+      "rating": 4.7,
+      "salesCount": 56
+    },
+    {
+      "id": "STR-004",
+      "name": "Dapur Belitang Rasa (Kue & Kerupuk)",
+      "owner": "Ibu Komang Ayu",
+      "phone": "085267119090",
+      "address": "Desa Gumawang, BK 4",
+      "district": "Belitang",
+      "status": "menunggu",
+      "verifiedAt": null,
+      "rating": 5,
+      "salesCount": 12
+    },
+    {
+      "id": "STR-005",
+      "name": "Madu Rimba Alami Komering",
+      "owner": "Pak Rusli Cempaka",
+      "phone": "081299882311",
+      "address": "Desa Campang Tiga",
+      "district": "Cempaka",
+      "status": "menunggu",
+      "verifiedAt": null,
+      "rating": 4.9,
+      "salesCount": 8
+    }
+  ],
+  "products": [
+    {
+      "id": "PRD-001",
+      "storeId": "STR-001",
+      "storeName": "Tani Makmur Belitang",
+      "name": "Beras Organik Ramos Belitang Super",
+      "category": "Beras dan hasil pertanian",
+      "price": 14500,
+      "unit": "kg",
+      "stock": 120,
+      "stockMin": 15,
+      "description": "Beras pulen asli hasil panen sawah irigasi teknis Belitang. Tanpa pemutih, tanpa pengawet sintetis, wangi dan higienis.",
+      "image": "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80",
+      "district": "Belitang Madang Raya"
+    },
+    {
+      "id": "PRD-002",
+      "storeId": "STR-001",
+      "storeName": "Tani Makmur Belitang",
+      "name": "Beras Ketan Putih Belitang Murni",
+      "category": "Beras dan hasil pertanian",
+      "price": 18000,
+      "unit": "kg",
+      "stock": 45,
+      "stockMin": 10,
+      "description": "Beras ketan putih kualitas prima cocok untuk aneka jajanan tradisional dan lemang khas daerah.",
+      "image": "https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=600&q=80",
+      "district": "Belitang Madang Raya"
+    },
+    {
+      "id": "PRD-003",
+      "storeId": "STR-003",
+      "storeName": "Berkah Perkebunan Buay Madang",
+      "name": "Lateks Karet Beku Bersih Kering (Lump Mangkok)",
+      "category": "Karet",
+      "price": 13200,
+      "unit": "kg",
+      "stock": 450,
+      "stockMin": 50,
+      "description": "Karet olahan petani Buay Madang dengan kadar karet kering (KKK) tinggi dan minim kotoran.",
+      "image": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80",
+      "district": "Buay Madang"
+    },
+    {
+      "id": "PRD-004",
+      "storeId": "STR-002",
+      "storeName": "Subur Sari Martapura",
+      "name": "Duku Komering Manis Pilihan",
+      "category": "Sayur dan buah",
+      "price": 22000,
+      "unit": "kg",
+      "stock": 65,
+      "stockMin": 10,
+      "description": "Duku asli aliran Sungai Komering dengan cita rasa manis segar, biji kecil, dan kulit tipis.",
+      "image": "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=600&q=80",
+      "district": "Martapura"
+    },
+    {
+      "id": "PRD-005",
+      "storeId": "STR-002",
+      "storeName": "Subur Sari Martapura",
+      "name": "Jeruk Siam Belitang Segar",
+      "category": "Sayur dan buah",
+      "price": 16000,
+      "unit": "kg",
+      "stock": 80,
+      "stockMin": 15,
+      "description": "Jeruk segar dipetik langsung dari kebun Belitang, air berlimpah dengan rasa manis manis segar.",
+      "image": "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=600&q=80",
+      "district": "Martapura"
+    },
+    {
+      "id": "PRD-006",
+      "storeId": "STR-001",
+      "storeName": "Tani Makmur Belitang",
+      "name": "Cabai Rawit Merah Segar Petik Pagi",
+      "category": "Sayur dan buah",
+      "price": 45000,
+      "unit": "kg",
+      "stock": 4,
+      "stockMin": 5,
+      "description": "Cabai rawit merah pedas alami, hasil panen segar pagi hari petani Belitang.",
+      "image": "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=600&q=80",
+      "district": "Belitang Madang Raya"
+    },
+    {
+      "id": "PRD-007",
+      "storeId": "STR-004",
+      "storeName": "Dapur Belitang Rasa (Kue & Kerupuk)",
+      "name": "Kerupuk Ikan Gabus Asli Belitang",
+      "category": "Olahan khas Belitang",
+      "price": 25000,
+      "unit": "kemasan 250g",
+      "stock": 35,
+      "stockMin": 5,
+      "description": "Kerupuk renyah gurih olahan ikan sungai komering dan rempah pilihan khas daerah Belitang.",
+      "image": "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=600&q=80",
+      "district": "Belitang"
+    },
+    {
+      "id": "PRD-008",
+      "storeId": "STR-004",
+      "storeName": "Dapur Belitang Rasa (Kue & Kerupuk)",
+      "name": "Lempuk Durian Komering Istimewa",
+      "category": "Olahan khas Belitang",
+      "price": 35000,
+      "unit": "kemasan 200g",
+      "stock": 20,
+      "stockMin": 5,
+      "description": "Dodol lempuk durian asli tanpa campuran tepung berlebih, wangi durian legit mantap.",
+      "image": "https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80",
+      "district": "Belitang"
+    },
+    {
+      "id": "PRD-009",
+      "storeId": "STR-005",
+      "storeName": "Madu Rimba Alami Komering",
+      "name": "Madu Hutan Liar Murni OKU Timur",
+      "category": "Produk UMKM lainnya",
+      "price": 95000,
+      "unit": "botol 500ml",
+      "stock": 18,
+      "stockMin": 5,
+      "description": "Madu mentah (raw honey) dipanen lestari oleh warga perbatasan Cempaka. 100% murni tanpa pemanasan.",
+      "image": "https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=600&q=80",
+      "district": "Cempaka"
+    },
+    {
+      "id": "PRD-010",
+      "storeId": "STR-001",
+      "storeName": "Tani Makmur Belitang",
+      "name": "Pupuk Kompos Organik Granul Kascing",
+      "category": "Produk UMKM lainnya",
+      "price": 20000,
+      "unit": "karung 10kg",
+      "stock": 50,
+      "stockMin": 10,
+      "description": "Pupuk ramah lingkungan penyubur tanah sawah & kebun buah, diproduksi dari fermentasi limbah jerami padi.",
+      "image": "https://images.unsplash.com/photo-1592417817098-8f3d69109853?auto=format&fit=crop&w=600&q=80",
+      "district": "Belitang Madang Raya"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-20261103-001",
+      "buyerName": "Siti Rahmawati",
+      "buyerPhone": "082177889900",
+      "buyerAddress": "Jl. Merdeka No. 45, Martapura",
+      "district": "Martapura",
+      "items": [
+        {
+          "productId": "PRD-001",
+          "name": "Beras Organik Ramos Belitang Super",
+          "price": 14500,
+          "qty": 10,
+          "unit": "kg",
+          "storeId": "STR-001",
+          "subtotal": 145000
+        }
+      ],
+      "totalAmount": 145000,
+      "paymentMethod": "COD (Bayar di Tempat)",
+      "notes": "Antar sore hari sesudah jam 4",
+      "status": "diproses",
+      "createdAt": "2026-11-03T11:20:00Z"
+    },
+    {
+      "id": "ORD-20261103-002",
+      "buyerName": "Bambang Irawan",
+      "buyerPhone": "081366554433",
+      "buyerAddress": "Komplek Pemkab OKU Timur, Kotabaru",
+      "district": "Martapura",
+      "items": [
+        {
+          "productId": "PRD-004",
+          "name": "Duku Komering Manis Pilihan",
+          "price": 22000,
+          "qty": 5,
+          "unit": "kg",
+          "storeId": "STR-002",
+          "subtotal": 110000
+        },
+        {
+          "productId": "PRD-005",
+          "name": "Jeruk Siam Belitang Segar",
+          "price": 16000,
+          "qty": 3,
+          "unit": "kg",
+          "storeId": "STR-002",
+          "subtotal": 48000
+        }
+      ],
+      "totalAmount": 158000,
+      "paymentMethod": "Transfer Bank Sumsel Babel",
+      "notes": "Pilih yang matang pohon manis",
+      "status": "dikirim",
+      "createdAt": "2026-11-03T09:40:00Z"
+    },
+    {
+      "id": "ORD-20261102-003",
+      "buyerName": "Ahmad Faisal",
+      "buyerPhone": "085278901234",
+      "buyerAddress": "Desa Sidodadi, BK 9",
+      "district": "Belitang",
+      "items": [
+        {
+          "productId": "PRD-007",
+          "name": "Kerupuk Ikan Gabus Asli Belitang",
+          "price": 25000,
+          "qty": 4,
+          "unit": "kemasan 250g",
+          "storeId": "STR-004",
+          "subtotal": 100000
+        }
+      ],
+      "totalAmount": 100000,
+      "paymentMethod": "COD (Bayar di Tempat)",
+      "notes": "Bungkus rapat jangan sampai hancur",
+      "status": "selesai",
+      "createdAt": "2026-11-02T14:15:00Z"
+    }
+  ]
+}

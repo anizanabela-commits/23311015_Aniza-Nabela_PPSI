@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B5E20;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF59D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FBC02D;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="110" fill="url(#grad)"/>
+  <!-- Tangkai Padi / Daun -->
+  <path d="M256 90 C 230 150 180 200 130 230 C 180 260 230 250 256 220 C 282 250 332 260 382 230 C 332 200 282 150 256 90 Z" fill="url(#gold)"/>
+  <path d="M256 160 C 240 210 200 250 160 270 C 200 295 240 285 256 260 C 272 285 312 295 352 270 C 312 250 272 210 256 160 Z" fill="url(#gold)"/>
+  <!-- Keranjang Sayur / Pertanian -->
+  <path d="M140 270 L372 270 L342 410 C 340 425 325 435 310 435 L202 435 C 187 435 172 425 170 410 Z" fill="#FFFFFF" opacity="0.95"/>
+  <path d="M190 270 L190 430 M256 270 L256 430 M322 270 L322 430 M155 350 L357 350" stroke="#2E7D32" stroke-width="8" stroke-linecap="round"/>
+  <!-- Daun Hijau di Keranjang -->
+  <circle cx="210" cy="250" r="32" fill="#81C784"/>
+  <circle cx="256" cy="235" r="36" fill="#4CAF50"/>
+  <circle cx="302" cy="250" r="32" fill="#66BB6A"/>
+</svg>
+

@@ -1,0 +1,46 @@
+{
+  "name": "Pasar Tani OKU Timur",
+  "short_name": "PasarTani",
+  "description": "Aplikasi Marketplace Hasil Pertanian & Produk UMKM Lokal Kabupaten Ogan Komering Ulu Timur",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAFAF7",
+  "theme_color": "#2E7D32",
+  "lang": "id-ID",
+  "dir": "ltr",
+  "categories": ["shopping", "business", "food", "lifestyle"],
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Katalog Belanja",
+      "short_name": "Belanja",
+      "description": "Cari hasil tani dan UMKM OKU Timur",
+      "url": "./index.html?tab=home",
+      "icons": [{ "src": "./icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Toko Petani",
+      "short_name": "Toko Saya",
+      "description": "Kelola produk dan pesanan masuk",
+      "url": "./index.html?tab=seller",
+      "icons": [{ "src": "./icon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Dashboard Dinas",
+      "short_name": "Admin",
+      "description": "Verifikasi toko dan analitik PAD",
+      "url": "./index.html?tab=admin",
+      "icons": [{ "src": "./icon.svg", "sizes": "192x192" }]
+    }
+  ]
+}
+
